@@ -46,4 +46,8 @@ class VendingMachine
   def juice_stock
     @stocks = {}
   end
+
+  def hello
+    puts "hello"
+  end
 end
