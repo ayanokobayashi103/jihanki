@@ -4,13 +4,13 @@
 # require '/Users/shibatadaiki/work_shiba/full_stack/sample.rb'
 # （↑のパスは、自動販売機ファイルが入っているパスを指定する）
 # 初期設定（自動販売機インスタンスを作成して、vmという変数に代入する）
- vm = VendingMachine.new
+#  vm = VendingMachine.new
 # 作成した自動販売機に100円を入れる
- vm.slot_money (100)
+#  vm.slot_money (100)
 # 作成した自動販売機に入れたお金がいくらかを確認する（表示する）
- vm.current_slot_money
+#  vm.current_slot_money
 # 作成した自動販売機に入れたお金を返してもらう
- vm.return_money
+#  vm.return_money
 class VendingMachine
   # ステップ０　お金の投入と払い戻しの例コード
 
@@ -21,6 +21,7 @@ class VendingMachine
   def initialize
     # 最初の自動販売機に入っている金額は0円
     @slot_money = 0
+    @stocks = {name: "cola", price: 120, count: 5}
   end
   # 投入金額の総計を取得できる。
   def current_slot_money
@@ -44,10 +45,13 @@ class VendingMachine
     @slot_money = 0
   end
   def juice_stock
-    @stocks = {}
+    puts @stocks
   end
 
   def hello
     puts "hello"
   end
 end
+
+vm = VendingMachine.new
+vm.juice_stock
